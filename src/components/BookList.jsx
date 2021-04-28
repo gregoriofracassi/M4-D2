@@ -5,12 +5,12 @@ import SingleBook from "./SingleBook"
 // console.log(scifi)
 
 const BookList = (props) => {
-  const last12 = [...scifi.slice(-12)]
+  const list = props.list
   return (
     <Container className="mt-5">
-      <h5>Books</h5>
+      <h5>Search Results</h5>
       <Row>
-        {last12.map((book) => {
+        {list.map((book) => {
           return (
             <SingleBook key={book.asin} title={book.title} image={book.img} />
           )

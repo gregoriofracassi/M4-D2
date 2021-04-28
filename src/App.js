@@ -12,7 +12,6 @@ const App = () => {
       <MyNav />
       <MyJumbo />
       <Search />
-      <BookList />
       <MyFooter />
     </div>
   )
