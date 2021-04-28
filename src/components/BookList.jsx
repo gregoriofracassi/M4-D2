@@ -12,7 +12,11 @@ const BookList = (props) => {
       <Row>
         {list.map((book) => {
           return (
-            <SingleBook key={book.asin} title={book.title} image={book.img} />
+            <SingleBook
+              key={`${book.asin}, ${book.category}`}
+              title={book.title}
+              image={book.img}
+            />
           )
         })}
       </Row>

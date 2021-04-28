@@ -1,6 +1,10 @@
 import React from "react"
 import { Container, Form } from "react-bootstrap"
 import history from "../data/history.json"
+import romance from "../data/romance.json"
+import scifi from "../data/scifi.json"
+import horror from "../data/horror.json"
+import fantasy from "../data/fantasy.json"
 import BookList from "./BookList"
 
 class Search extends React.Component {
@@ -9,7 +13,9 @@ class Search extends React.Component {
   }
 
   search = (searchQuery) => {
-    const filteredBooks = history.filter((book) =>
+    const allBooks = [...history, ...romance, ...scifi, ...fantasy, ...horror]
+    console.log(allBooks)
+    const filteredBooks = allBooks.filter((book) =>
       book.title.toLowerCase().includes(searchQuery)
     )
     return filteredBooks
