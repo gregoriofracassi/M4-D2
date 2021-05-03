@@ -35,7 +35,7 @@ class BookList extends React.Component {
             </Row>
           </Col>
           <Col xs={6}>
-            <CommentForm />
+            <CommentForm book={this.state.selectedBook} />
           </Col>
         </Row>
       </Container>
