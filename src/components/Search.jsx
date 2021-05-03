@@ -9,7 +9,7 @@ import BookList from "./BookList"
 
 class Search extends React.Component {
   state = {
-    query: "foaeih",
+    query: "",
   }
 
   search = (searchQuery) => {
